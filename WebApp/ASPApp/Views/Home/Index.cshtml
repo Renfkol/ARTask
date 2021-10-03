@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form action='@Url.Action("Push")' method="post">
+        <input type="text" name="message" />
+        <input  class="btn-primary" type="submit" value="Send" />
+    </form>
+
+    <div id="notify"></div>
+
+
+
+
+    @*<script src="js/signalr/dist/browser/signalr.min.js"></script>
+    <script>
+        const hubConnection = new signalR.HubConnectionBuilder()
+            .withUrl("/animation")
+            .build();
+
+        hubConnection.on('Animation', function (message) {
+            let elem = document.createElement("p");
+            elem.appendChild(document.createTextNode(message));
+
+            document.getElementById("notify").appendChild(elem);
+        });
+        hubConnection.start();
+        </script>
+    *@
